@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class SimpleCalculator {
+    public static void main(String[] args)
+    {
+    Scanner in = new Scanner (System.in); 
+    int f_num, s_num;
+    
+    System.out.println("Enter numbers");
+    f_num = in.nextInt();
+    s_num = in.nextInt();
+    
+    System.out.println("Enter operation");
+    System.out.println("Enter 1 for the addition, 2 for subtraction, 3 for multiplication, 4 for division");
+    
+    int choice = in.nextInt();
+    
+    if( choice == 1)
+    {  
+        int result = f_num + s_num;
+        System.out.println("Addition = "+result);
+    } 
+    else if( choice ==2 )
+    {
+        int result = f_num - s_num;
+        System.out.println("subtrsction=" +result);
+    }
+    else if (choice ==3)
+    {
+        int result = f_num * s_num;
+        System.out.println("Multiplication =" +result);
+    }
+    else if ( choice ==4)
+    {
+        float result = f_num / s_num;
+        System.out.println("Division=" +result);
+    }
+    else
+    {
+        System.out.println("No option was selected");
+    }    
+    }
+}
